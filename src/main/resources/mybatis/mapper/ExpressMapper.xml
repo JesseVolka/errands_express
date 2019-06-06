@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jessevolka.mapper.ExpressMapper">
+    <select id="getExpressByPickUpCode" resultType="com.jessevolka.model.Express">
+    select * from express where pick_up_code=#{pickUpCode}
+   </select>
+</mapper>

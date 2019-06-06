@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jessevolka.mapper.UserMapper">
+    <select id="getUserByName" resultType="com.jessevolka.model.User">
+    select * from user where user_name=#{name}
+   </select>
+    <resultMap id="UserMap" type="com.jessevolka.model.User">
+        <result property="userName" column="user_name"/>
+        <result property="userPassword" column="user_password"/>
+        <result property="role" column="role"/>
+    </resultMap>
+    <select id="getUsers" resultMap="UserMap">
+    select * from user
+   </select>
+    <insert id="insertUser" parameterType="com.jessevolka.model.User">
+        insert into user values (#{user.userName},#{user.userPassword},#{user.role})
+    </insert>
+    <delete id="deleteUser">
+  delete from user where user_name = #{name}
+</delete>
+    <update id="updateUser">
+  update user set
+    user_password=#{user.userPassword},
+    role= #{user.role}
+  where user_name = #{user.userName}
+</update>
+</mapper>
