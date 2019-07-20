@@ -9,9 +9,9 @@
 ## <p style="text-align:center">数据库设计</p>
 ![](images/DBdesign.png)
 ## <p style="text-align:center">项目进度展示</p>
-==管理员控制页面==
+管理员控制页面
 ![](images/backstage-supporter.png)
-== DRUID==
+DRUID
 ![](images/duridDataSource.png)
 
 
