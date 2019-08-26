@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: qweasd123
-    url: jdbc:mysql://172.17.0.2:3306/errands_express
+    https://github.com/JesseVolka/errands_express
     driver-class-name: com.mysql.cj.jdbc.Driver
     initialSize: 5
     minIdle: 5
